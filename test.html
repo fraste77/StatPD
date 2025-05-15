@@ -58,6 +58,10 @@
   
   <!-- Differenza con giorno AP -->
   <h2 id="GiornoAP">Caricamento data...</h2>
+    <!-- Prima sezione -->
+  <div class="dato"><span class="label">Dichiaranti:</span><span class="valore" id="DichiarantiAP">-</span></div>
+  <div class="dato"><span class="label">Coniugi:</span><span class="valore" id="ConiugiAP">-</span></div>
+  <div class="dato"><span class="label">Totale:</span><span class="valore" id="TotaleAP">-</span></div>
 
   <script>
     async function caricaDati() {
@@ -77,6 +81,9 @@
         document.getElementById("eurototale").textContent = json.EuroTotaleAC ?? "-";
 
         document.getElementById("GiornoAP").textContent = json.GiornoAP || "Data non disponibile";
+        document.getElementById("DichiarantiAP").textContent = json.DichiarantiAP ?? "-";
+        document.getElementById("ConiugiAP").textContent = json.ConiugiAP ?? "-";
+        document.getElementById("TotaleAP").textContent = json.TotaleAP ?? "-";
       } catch (error) {
         console.error("Errore nel caricamento:", error);
         document.getElementById("giorno").textContent = "Errore nel caricamento dei dati.";
