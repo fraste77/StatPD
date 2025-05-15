@@ -55,6 +55,9 @@
   <div class="dato"><span class="label">Precomp:</span><span class="valore" id="europrecomp">-</span></div>
   <div class="dato"><span class="label">IMU/TASI:</span><span class="valore" id="euroimu">-</span></div>
   <div class="dato"><span class="label">Totale:</span><span class="valore" id="eurototale">-</span></div>
+  
+  <!-- Differenza con giorno AP -->
+  <h2 id="GiornoAP">Caricamento data...</h2>
 
   <script>
     async function caricaDati() {
@@ -72,6 +75,8 @@
         document.getElementById("europrecomp").textContent = json.EuroPrecompAC ?? "-";
         document.getElementById("euroimu").textContent = json.EuroIMUAC ?? "-";
         document.getElementById("eurototale").textContent = json.EuroTotaleAC ?? "-";
+
+        document.getElementById("GiornoAP").textContent = json.GiornoAP || "Data non disponibile";
       } catch (error) {
         console.error("Errore nel caricamento:", error);
         document.getElementById("giorno").textContent = "Errore nel caricamento dei dati.";
