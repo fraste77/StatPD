@@ -2,41 +2,72 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <title>GiornoAC - StatPD</title>
+  <title>Statistiche StatPD</title>
   <style>
     body {
       font-family: sans-serif;
       padding: 2rem;
     }
+    h1 {
+      margin-bottom: 0.5rem;
+    }
     #giorno {
-      font-size: 1.5rem;
-      color: #007acc;
+      margin-bottom: 1.5rem;
+      font-size: 1.2rem;
+      color: #555;
+    }
+    table {
+      border-collapse: collapse;
+      width: 300px;
+    }
+    th, td {
+      padding: 8px 12px;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+    th {
+      background-color: #f0f0f0;
     }
   </style>
 </head>
 <body>
-  <h1>Ultimo aggiornamento dati (GiornoAC)</h1>
-  <div id="giorno">Caricamento...</div>
+  <h1>Statistiche Attuali</h1>
+  <div id="giorno">Caricamento data...</div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Dichiaranti</th>
+        <th>Coniugi</th>
+        <th>Totale</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td id="dichiaranti">-</td>
+        <td id="coniugi">-</td>
+        <td id="totale">-</td>
+      </tr>
+    </tbody>
+  </table>
 
   <script>
-    async function caricaGiornoAC() {
+    async function caricaDati() {
       try {
         const response = await fetch("https://fraste77.github.io/StatPD/StatPD.json");
         const json = await response.json();
 
-        // Verifica che il campo GiornoAC esista
-        if ("GiornoAC" in json) {
-          document.getElementById("giorno").textContent = json.GiornoAC;
-        } else {
-          document.getElementById("giorno").textContent = "Campo GiornoAC non trovato.";
-        }
+        document.getElementById("giorno").textContent = `Ultimo aggiornamento: ${json.GiornoAC || "N/D"}`;
+        document.getElementById("dichiaranti").textContent = json.DichiarantiAC ?? "-";
+        document.getElementById("coniugi").textContent = json.ConiugiAC ?? "-";
+        document.getElementById("totale").textContent = json.TotaleAC ?? "-";
       } catch (error) {
-        console.error("Errore nel recupero:", error);
+        console.error("Errore nel caricamento:", error);
         document.getElementById("giorno").textContent = "Errore nel caricamento dei dati.";
       }
     }
 
-    caricaGiornoAC();
+    caricaDati();
   </script>
 </body>
 </html>
