@@ -2,66 +2,53 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <title>Dati completi StatPD</title>
+  <title>Dati StatPD essenziali</title>
   <style>
     body {
       font-family: sans-serif;
       padding: 2rem;
-      max-width: 500px;
+      max-width: 400px;
     }
-    h1 {
+    h2 {
+      color: #007acc;
       margin-bottom: 1rem;
     }
     .dato {
-      margin-bottom: 0.8rem;
-      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
     }
     .label {
       font-weight: 700;
-      color: #007acc;
       margin-right: 0.5rem;
-      display: inline-block;
-      min-width: 120px;
     }
   </style>
 </head>
 <body>
-  <h1>Dati StatPD</h1>
-  <div id="contenuto">Caricamento dati...</div>
+  <h2 id="giorno">Caricamento data...</h2>
+
+  <div class="dato"><span class="label">Dichiaranti:</span> <span id="dichiaranti">-</span></div>
+  <div class="dato"><span class="label">Coniugi:</span> <span id="coniugi">-</span></div>
+  <div class="dato"><span class="label">Totale:</span> <span id="totale">-</span></div>
 
   <script>
-    async function caricaTuttiIDati() {
+    async function caricaDati() {
       try {
         const response = await fetch("https://fraste77.github.io/StatPD/StatPD.json");
         const json = await response.json();
 
-        const contenuto = document.getElementById("contenuto");
-        contenuto.innerHTML = ""; // pulisco
-
-        // Itera su tutte le proprietà del JSON (top-level)
-        for (const [chiave, valore] of Object.entries(json)) {
-          const div = document.createElement("div");
-          div.classList.add("dato");
-
-          // Formatta il valore come stringa leggibile
-          let valStr;
-          if (typeof valore === "object") {
-            // Se è un oggetto o array, stringify con indentazione
-            valStr = JSON.stringify(valore, null, 2);
-          } else {
-            valStr = valore;
-          }
-
-          div.innerHTML = `<span class="label">${chiave}:</span> <pre style="display:inline; margin:0; font-family: monospace;">${valStr}</pre>`;
-          contenuto.appendChild(div);
-        }
+        document.getElementById("giorno").textContent = json.GiornoAC || "Data non disponibile";
+        document.getElementById("dichiaranti").textContent = json.DichiarantiAC ?? "-";
+        document.getElementById("coniugi").textContent = json.ConiugiAC ?? "-";
+        document.getElementById("totale").textContent = json.TotaleAC ?? "-";
       } catch (error) {
         console.error("Errore nel caricamento:", error);
-        document.getElementById("contenuto").textContent = "Errore nel caricamento dei dati.";
+        document.getElementById("giorno").textContent = "Errore nel caricamento dei dati.";
       }
     }
 
-    caricaTuttiIDati();
+    caricaDati();
   </script>
 </body>
 </html>
+
+
