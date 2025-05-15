@@ -33,16 +33,15 @@
   </table>
 
   <script>
-    async function loadData() {
-      try {
-        const response = await fetch("https://fraste77.github.io/StatPD/StatPD.json");
-        const json = await response.json();
-        const data = json.data;
+async function loadData() {
+  try {
+    const response = await fetch("https://fraste77.github.io/StatPD/StatPD.json");
+    const data = await response.json();
 
-        if (!Array.isArray(data) || data.length === 0) {
-          document.body.innerHTML += "<p>Nessun dato disponibile.</p>";
-          return;
-        }
+    if (!Array.isArray(data) || data.length === 0) {
+      document.body.innerHTML += "<p>Nessun dato disponibile.</p>";
+      return;
+    }
 
         const headers = Object.keys(data[0]);
         const thead = document.querySelector("thead");
