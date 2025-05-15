@@ -62,6 +62,12 @@
   <div class="dato"><span class="label">Dichiaranti:</span><span class="valore" id="DichiarantiAP">-</span></div>
   <div class="dato"><span class="label">Coniugi:</span><span class="valore" id="ConiugiAP">-</span></div>
   <div class="dato"><span class="label">Totale:</span><span class="valore" id="TotaleAP">-</span></div>
+  <hr />
+  <!-- Seconda sezione -->
+  <div class="dato"><span class="label">730:</span><span class="valore" id="Euro730AP">-</span></div>
+  <div class="dato"><span class="label">Precomp:</span><span class="valore" id="EuroPrecompAP">-</span></div>
+  <div class="dato"><span class="label">IMU/TASI:</span><span class="valore" id="EuroIMUAP">-</span></div>
+  <div class="dato"><span class="label">Totale:</span><span class="valore" id="EuroTotaleAP">-</span></div>
 
   <script>
     async function caricaDati() {
@@ -84,6 +90,11 @@
         document.getElementById("DichiarantiAP").textContent = json.DichiarantiAP ?? "-";
         document.getElementById("ConiugiAP").textContent = json.ConiugiAP ?? "-";
         document.getElementById("TotaleAP").textContent = json.TotaleAP ?? "-";
+        
+        document.getElementById("Euro730AP").textContent = json.Euro730AP ?? "-";
+        document.getElementById("EuroPrecompAP").textContent = json.EuroPrecompAP ?? "-";
+        document.getElementById("EuroIMUAP").textContent = json.EuroIMUAP ?? "-";
+        document.getElementById("EuroTotaleAP").textContent = json.EuroTotaleAP ?? "-";
       } catch (error) {
         console.error("Errore nel caricamento:", error);
         document.getElementById("giorno").textContent = "Errore nel caricamento dei dati.";
