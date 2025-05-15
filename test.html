@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Statistiche StatPD</title>
   <style>
     body {
       font-family: sans-serif;
       padding: 2rem;
+      max-width: 400px;
     }
     h1 {
       margin-bottom: 0.5rem;
@@ -16,17 +17,14 @@
       font-size: 1.2rem;
       color: #555;
     }
-    table {
-      border-collapse: collapse;
-      width: 300px;
+    .dato {
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
     }
-    th, td {
-      padding: 8px 12px;
-      border: 1px solid #ccc;
-      text-align: left;
-    }
-    th {
-      background-color: #f0f0f0;
+    .label {
+      font-weight: 600;
+      margin-right: 0.5rem;
+      color: #007acc;
     }
   </style>
 </head>
@@ -34,22 +32,9 @@
   <h1>Statistiche Attuali</h1>
   <div id="giorno">Caricamento data...</div>
 
-  <table>
-    <thead>
-      <tr>
-        <th>Dichiaranti</th>
-        <th>Coniugi</th>
-        <th>Totale</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td id="dichiaranti">-</td>
-        <td id="coniugi">-</td>
-        <td id="totale">-</td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="dato"><span class="label">Dichiaranti:</span> <span id="dichiaranti">-</span></div>
+  <div class="dato"><span class="label">Coniugi:</span> <span id="coniugi">-</span></div>
+  <div class="dato"><span class="label">Totale:</span> <span id="totale">-</span></div>
 
   <script>
     async function caricaDati() {
