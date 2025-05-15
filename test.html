@@ -82,6 +82,18 @@
   <div class="dato"><span class="label">IMU/TASI:</span><span class="valore" id="EuroIMUTOT">-</span></div>
   <div class="dato"><span class="label">Totale:</span><span class="valore" id="EuroTotaleTOT">-</span></div>
 
+  <!-- Differenze Totali -->
+  <h2>Differenze Totali</h2>
+    <!-- Prima sezione -->
+  <div class="dato"><span class="label">Differenza:</span><span class="valore" id="TotaleDIF">-</span></div>
+  <div class="dato"><span class="label">Percentuale:</span><span class="valore" id="PercentualeDIF">-</span></div>
+  <hr />
+  <!-- Seconda sezione -->
+  <div class="dato"><span class="label">730:</span><span class="valore" id="Euro730DIF">-</span></div>
+  <div class="dato"><span class="label">Precomp:</span><span class="valore" id="EuroPrecompDIF">-</span></div>
+  <div class="dato"><span class="label">IMU/TASI:</span><span class="valore" id="EuroIMUDIF">-</span></div>
+  <div class="dato"><span class="label">Totale:</span><span class="valore" id="EuroTotaleDIF">-</span></div>
+
   <script>
     async function caricaDati() {
       try {
@@ -109,9 +121,6 @@
         document.getElementById("EuroIMUAP").textContent = json.EuroIMUAP ?? "-";
         document.getElementById("EuroTotaleAP").textContent = json.EuroTotaleAP ?? "-";
 
-
-
-
         document.getElementById("DichiarantiTOT").textContent = json.DichiarantiTOT ?? "-";
         document.getElementById("ConiugiTOT").textContent = json.ConiugiTOT ?? "-";
         document.getElementById("TotaleTOT").textContent = json.TotaleTOT ?? "-";
@@ -120,6 +129,14 @@
         document.getElementById("EuroPrecompTOT").textContent = json.EuroPrecompTOT ?? "-";
         document.getElementById("EuroIMUTOT").textContent = json.EuroIMUTOT ?? "-";
         document.getElementById("EuroTotaleTOT").textContent = json.EuroTotaleTOT ?? "-";
+
+        document.getElementById("TotaleDIF").textContent = json.TotaleDIF ?? "-";
+        document.getElementById("PercentualeDIF").textContent = json.PercentualeDIF ?? "-";
+        
+        document.getElementById("Euro730DIF").textContent = json.Euro730DIF ?? "-";
+        document.getElementById("EuroPrecompDIF").textContent = json.EuroPrecompDIF ?? "-";
+        document.getElementById("EuroIMUDIF").textContent = json.EuroIMUDIF ?? "-";
+        document.getElementById("EuroTotaleDIF").textContent = json.EuroTotaleDIF ?? "-";
       } catch (error) {
         console.error("Errore nel caricamento:", error);
         document.getElementById("giorno").textContent = "Errore nel caricamento dei dati.";
