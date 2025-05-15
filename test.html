@@ -69,6 +69,19 @@
   <div class="dato"><span class="label">IMU/TASI:</span><span class="valore" id="EuroIMUAP">-</span></div>
   <div class="dato"><span class="label">Totale:</span><span class="valore" id="EuroTotaleAP">-</span></div>
 
+  <!-- Totali -->
+  <h2>Totali</h2>
+    <!-- Prima sezione -->
+  <div class="dato"><span class="label">Dichiaranti:</span><span class="valore" id="DichiarantiTOT">-</span></div>
+  <div class="dato"><span class="label">Coniugi:</span><span class="valore" id="ConiugiTOT">-</span></div>
+  <div class="dato"><span class="label">Totale:</span><span class="valore" id="TotaleTOT">-</span></div>
+  <hr />
+  <!-- Seconda sezione -->
+  <div class="dato"><span class="label">730:</span><span class="valore" id="Euro730TOT">-</span></div>
+  <div class="dato"><span class="label">Precomp:</span><span class="valore" id="EuroPrecompTOT">-</span></div>
+  <div class="dato"><span class="label">IMU/TASI:</span><span class="valore" id="EuroIMUTOT">-</span></div>
+  <div class="dato"><span class="label">Totale:</span><span class="valore" id="EuroTotaleTOT">-</span></div>
+
   <script>
     async function caricaDati() {
       try {
@@ -95,6 +108,18 @@
         document.getElementById("EuroPrecompAP").textContent = json.EuroPrecompAP ?? "-";
         document.getElementById("EuroIMUAP").textContent = json.EuroIMUAP ?? "-";
         document.getElementById("EuroTotaleAP").textContent = json.EuroTotaleAP ?? "-";
+
+
+
+
+        document.getElementById("DichiarantiTOT").textContent = json.DichiarantiTOT ?? "-";
+        document.getElementById("ConiugiTOT").textContent = json.ConiugiTOT ?? "-";
+        document.getElementById("TotaleTOT").textContent = json.TotaleTOT ?? "-";
+        
+        document.getElementById("Euro730TOT").textContent = json.Euro730TOT ?? "-";
+        document.getElementById("EuroPrecompTOT").textContent = json.EuroPrecompTOT ?? "-";
+        document.getElementById("EuroIMUTOT").textContent = json.EuroIMUTOT ?? "-";
+        document.getElementById("EuroTotaleTOT").textContent = json.EuroTotaleTOT ?? "-";
       } catch (error) {
         console.error("Errore nel caricamento:", error);
         document.getElementById("giorno").textContent = "Errore nel caricamento dei dati.";
