@@ -9,26 +9,30 @@
       padding: 2rem;
       max-width: 500px;
     }
+
     h2 {
       color: #007acc;
       margin-bottom: 1.5rem;
     }
+
     .dato {
-      display: grid;
-      grid-template-columns: auto 1fr;
-      align-items: center;
-      margin-bottom: 0.6rem;
-      font-size: 1.1rem;
+      display: flex;
+      margin-bottom: 0.5rem;
     }
+
     .label {
-      font-weight: 700;
+      flex: 1;
+      font-weight: bold;
       color: #333;
-      padding-right: 0.5rem;
     }
+
     .valore {
+      flex: 0;
       text-align: right;
+      min-width: 100px;
       font-variant-numeric: tabular-nums;
     }
+
     hr {
       margin: 1.5rem 0 1rem 0;
       border: none;
@@ -40,17 +44,17 @@
   <h2 id="giorno">Caricamento data...</h2>
 
   <!-- Prima sezione -->
-  <div class="dato"><span class="label">Dichiaranti:</span> <span class="valore" id="dichiaranti">-</span></div>
-  <div class="dato"><span class="label">Coniugi:</span> <span class="valore" id="coniugi">-</span></div>
-  <div class="dato"><span class="label">Totale:</span> <span class="valore" id="totale">-</span></div>
+  <div class="dato"><span class="label">Dichiaranti:</span><span class="valore" id="dichiaranti">-</span></div>
+  <div class="dato"><span class="label">Coniugi:</span><span class="valore" id="coniugi">-</span></div>
+  <div class="dato"><span class="label">Totale:</span><span class="valore" id="totale">-</span></div>
 
   <hr />
 
   <!-- Seconda sezione -->
-  <div class="dato"><span class="label">730:</span> <span class="valore" id="euro730">-</span></div>
-  <div class="dato"><span class="label">Precomp:</span> <span class="valore" id="europrecomp">-</span></div>
-  <div class="dato"><span class="label">IMU/TASI:</span> <span class="valore" id="euroimu">-</span></div>
-  <div class="dato"><span class="label">Totale:</span> <span class="valore" id="eurototale">-</span></div>
+  <div class="dato"><span class="label">730:</span><span class="valore" id="euro730">-</span></div>
+  <div class="dato"><span class="label">Precomp:</span><span class="valore" id="europrecomp">-</span></div>
+  <div class="dato"><span class="label">IMU/TASI:</span><span class="valore" id="euroimu">-</span></div>
+  <div class="dato"><span class="label">Totale:</span><span class="valore" id="eurototale">-</span></div>
 
   <script>
     async function caricaDati() {
@@ -60,12 +64,10 @@
 
         document.getElementById("giorno").textContent = json.GiornoAC || "Data non disponibile";
 
-        // Prima sezione
         document.getElementById("dichiaranti").textContent = json.DichiarantiAC ?? "-";
         document.getElementById("coniugi").textContent = json.ConiugiAC ?? "-";
         document.getElementById("totale").textContent = json.TotaleAC ?? "-";
 
-        // Seconda sezione
         document.getElementById("euro730").textContent = json.Euro730AC ?? "-";
         document.getElementById("europrecomp").textContent = json.EuroPrecompAC ?? "-";
         document.getElementById("euroimu").textContent = json.EuroIMUAC ?? "-";
