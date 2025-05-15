@@ -94,6 +94,20 @@
   <div class="dato"><span class="label">IMU/TASI:</span><span class="valore" id="EuroIMUDIF">-</span></div>
   <div class="dato"><span class="label">Totale:</span><span class="valore" id="EuroTotaleDIF">-</span></div>
 
+  <!-- Appuntamenti Oggi -->
+  <h2>Appuntamenti Oggi</h2>
+  <div class="dato"><span class="label">Possibili:</span><span class="valore" id="AppPossibiliOggi">-</span></div>
+  <div class="dato"><span class="label">730:</span><span class="valore" id="App730Oggi">-</span></div>
+  <div class="dato"><span class="label">Liberi:</span><span class="valore" id="AppLiberiOggi">-</span></div>
+  <div class="dato"><span class="label">Blocchi:</span><span class="valore" id="AppBlocchiOggi">-</span></div>
+
+  <!-- Appuntamenti Domani -->
+  <h2>Appuntamenti Domani</h2>
+  <div class="dato"><span class="label">Possibili:</span><span class="valore" id="AppPossibiliDomani">-</span></div>
+  <div class="dato"><span class="label">730:</span><span class="valore" id="App730Domani">-</span></div>
+  <div class="dato"><span class="label">Liberi:</span><span class="valore" id="AppLiberiDomani">-</span></div>
+  <div class="dato"><span class="label">Blocchi:</span><span class="valore" id="AppBlocchiDomani">-</span></div>
+
   <script>
     async function caricaDati() {
       try {
@@ -137,6 +151,17 @@
         document.getElementById("EuroPrecompDIF").textContent = json.EuroPrecompDIF ?? "-";
         document.getElementById("EuroIMUDIF").textContent = json.EuroIMUDIF ?? "-";
         document.getElementById("EuroTotaleDIF").textContent = json.EuroTotaleDIF ?? "-";
+
+        document.getElementById("AppPossibiliOggi").textContent = json.AppPossibiliOggi ?? "-";
+        document.getElementById("App730Oggi").textContent = json.App730Oggi ?? "-";
+        document.getElementById("AppLiberiOggi").textContent = json.AppLiberiOggi ?? "-";
+        document.getElementById("AppBlocchiOggi").textContent = json.AppBlocchiOggi ?? "-";
+
+        document.getElementById("AppPossibiliDomani").textContent = json.AppPossibiliDomani ?? "-";
+        document.getElementById("App730Domani").textContent = json.App730Domani ?? "-";
+        document.getElementById("AppLiberiDomani").textContent = json.AppLiberiDomani ?? "-";
+        document.getElementById("AppBlocchiDomani").textContent = json.AppBlocchiDomani ?? "-";
+        
       } catch (error) {
         console.error("Errore nel caricamento:", error);
         document.getElementById("giorno").textContent = "Errore nel caricamento dei dati.";
