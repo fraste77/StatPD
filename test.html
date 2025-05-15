@@ -11,18 +11,25 @@
     }
     h2 {
       color: #007acc;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
     }
     .dato {
-      margin-bottom: 0.8rem;
-      font-size: 1.2rem;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.6rem;
+      font-size: 1.1rem;
     }
     .label {
       font-weight: 700;
-      margin-right: 0.5rem;
+      color: #333;
+    }
+    .valore {
+      text-align: right;
+      min-width: 120px;
+      font-variant-numeric: tabular-nums;
     }
     hr {
-      margin: 2rem 0 1rem 0;
+      margin: 2rem 0 1.2rem 0;
       border: none;
       border-top: 1px solid #ccc;
     }
@@ -32,17 +39,17 @@
   <h2 id="giorno">Caricamento data...</h2>
 
   <!-- Prima sezione -->
-  <div class="dato"><span class="label">Dichiaranti:</span> <span id="dichiaranti">-</span></div>
-  <div class="dato"><span class="label">Coniugi:</span> <span id="coniugi">-</span></div>
-  <div class="dato"><span class="label">Totale:</span> <span id="totale">-</span></div>
+  <div class="dato"><span class="label">Dichiaranti:</span> <span class="valore" id="dichiaranti">-</span></div>
+  <div class="dato"><span class="label">Coniugi:</span> <span class="valore" id="coniugi">-</span></div>
+  <div class="dato"><span class="label">Totale:</span> <span class="valore" id="totale">-</span></div>
 
   <hr />
 
   <!-- Seconda sezione -->
-  <div class="dato"><span class="label">730:</span> <span id="euro730">-</span></div>
-  <div class="dato"><span class="label">Precomp:</span> <span id="europrecomp">-</span></div>
-  <div class="dato"><span class="label">IMU/TASI:</span> <span id="euroimu">-</span></div>
-  <div class="dato"><span class="label">Totale:</span> <span id="eurototale">-</span></div>
+  <div class="dato"><span class="label">730:</span> <span class="valore" id="euro730">-</span></div>
+  <div class="dato"><span class="label">Precomp:</span> <span class="valore" id="europrecomp">-</span></div>
+  <div class="dato"><span class="label">IMU/TASI:</span> <span class="valore" id="euroimu">-</span></div>
+  <div class="dato"><span class="label">Totale:</span> <span class="valore" id="eurototale">-</span></div>
 
   <script>
     async function caricaDati() {
