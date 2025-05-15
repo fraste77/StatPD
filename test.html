@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Statistiche PD</title>
   <style>
     body {
@@ -15,64 +15,63 @@
       margin-top: 20px;
     }
     th, td {
-      padding: 8px;
       border: 1px solid #ccc;
+      padding: 8px;
       text-align: left;
     }
     th {
-      background-color: #f0f0f0;
+      background-color: #f2f2f2;
     }
   </style>
 </head>
 <body>
   <h1>Statistiche Partito Democratico</h1>
-  <div id="lastUpdate"></div>
+  <p id="lastUpdate"></p>
   <table id="data-table">
-    <thead id="table-head"></thead>
-    <tbody id="table-body"></tbody>
+    <thead></thead>
+    <tbody></tbody>
   </table>
 
   <script>
     async function loadData() {
       try {
-        const response = await fetch('https://fraste77.github.io/StatPD/StatPD.json');
+        const response = await fetch("https://fraste77.github.io/StatPD/StatPD.json");
         const json = await response.json();
         const data = json.data;
 
-        if (!Array.isArray(data)) {
-          console.error("Il campo 'data' non è un array.");
+        if (!Array.isArray(data) || data.length === 0) {
+          document.body.innerHTML += "<p>Nessun dato disponibile.</p>";
           return;
         }
 
-        const tableHead = document.getElementById("table-head");
-        const tableBody = document.getElementById("table-body");
-
-        tableHead.innerHTML = "";
-        tableBody.innerHTML = "";
-
         const headers = Object.keys(data[0]);
+        const thead = document.querySelector("thead");
+        const tbody = document.querySelector("tbody");
+
+        // Costruisci intestazione tabella
         const headRow = document.createElement("tr");
         headers.forEach(header => {
           const th = document.createElement("th");
           th.textContent = header;
           headRow.appendChild(th);
         });
-        tableHead.appendChild(headRow);
+        thead.appendChild(headRow);
 
-        data.forEach(item => {
-          const row = document.createElement("tr");
+        // Costruisci righe della tabella
+        data.forEach(row => {
+          const tr = document.createElement("tr");
           headers.forEach(header => {
-            const cell = document.createElement("td");
-            cell.textContent = item[header];
-            row.appendChild(cell);
+            const td = document.createElement("td");
+            td.textContent = row[header];
+            tr.appendChild(td);
           });
-          tableBody.appendChild(row);
+          tbody.appendChild(tr);
         });
 
-        const now = new Date();
-        document.getElementById("lastUpdate").textContent = `Ultimo aggiornamento: ${now.toLocaleString()}`;
+        document.getElementById("lastUpdate").textContent = `Ultimo aggiornamento: ${new Date().toLocaleString()}`;
       } catch (error) {
-        console.error("Errore durante il caricamento dei dati:", error);
+        console.error("Errore nel caricamento dei dati:", error);
+        document.body.innerHTML += `<p style="color:red;">Errore nel caricamento dei dati: ${error.message}</p>`;
       }
     }
 
