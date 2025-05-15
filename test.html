@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Statistiche PD</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      padding: 8px;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+    th {
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Statistiche PD</h1>
+  <div id="lastUpdate"></div>
+  <table id="data-table">
+    <thead id="table-head"></thead>
+    <tbody id="table-body"></tbody>
+  </table>
+
+  <script>
+    async function loadData() {
+      try {
+        const response = await fetch('https://fraste77.github.io/StatPD/StatPD.json');
+        const data = await response.json();
+
+        if (!Array.isArray(data)) {
+          console.error("I dati JSON non sono un array.");
+          return;
+        }
+
+        const tableHead = document.getElementById("table-head");
+        const tableBody = document.getElementById("table-body");
+
+        // Pulisci la tabella
+        tableHead.innerHTML = "";
+        tableBody.innerHTML = "";
+
+        // Genera intestazione della tabella
+        const headers = Object.keys(data[0]);
+        const headRow = document.createElement("tr");
+        headers.forEach(header => {
+          const th = document.createElement("th");
+          th.textContent = header;
+          headRow.appendChild(th);
+        });
+        tableHead.appendChild(headRow);
+
+        // Popola il corpo della tabella
+        data.forEach(item => {
+          const row = document.createElement("tr");
+          headers.forEach(header => {
+            const cell = document.createElement("td");
+            cell.textContent = item[header];
+            row.appendChild(cell);
+          });
+          tableBody.appendChild(row);
+        });
+
+        // Ultimo aggiornamento
+        const now = new Date();
+        document.getElementById("lastUpdate").textContent = `Ultimo aggiornamento: ${now.toLocaleString()}`;
+      } catch (error) {
+        console.error("Errore durante il caricamento dei dati:", error);
+      }
+    }
+
+    loadData();
+  </script>
+</body>
+</html>
