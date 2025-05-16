@@ -184,8 +184,8 @@
           if (val.startsWith('-')) {
             el.style.color = 'red';
           } else if (
-            (id === 'DichiarantiAP' || id === 'ConiugiAP' || id === 'TotaleAP' || id === 'Euro730AP') &&
-            /^[\d,.]+$/.test(val)
+            ['DichiarantiAP', 'ConiugiAP', 'TotaleAP', 'Euro730AP'].includes(id) &&
+            /^[\\d,.]+$/.test(val)
           ) {
             el.style.color = 'green';
           } else {
