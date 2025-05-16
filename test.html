@@ -184,7 +184,7 @@ document.querySelectorAll('.valore').forEach(el => {
   if (val.startsWith('-')) {
     el.style.color = 'red';
   } else if (
-    ['DichiarantiAP', 'ConiugiAP', 'TotaleAP', 'Euro730AP'].includes(id) &&
+    ['DichiarantiAP', 'ConiugiAP', 'TotaleAP', 'Euro730AP', 'EuroPrecompAP', 'EuroIMUAP', 'EuroTotaleAP'].includes(id) &&
     val !== '-'
   ) {
     el.style.color = 'green';
