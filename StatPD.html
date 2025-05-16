@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dati StatPD essenziali</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 2rem;
+      max-width: 500px;
+      font-size: 2.4rem;
+    }
+
+    h2 {
+      color: #007acc;
+      margin-bottom: 1.5rem;
+      font-size: 3.0rem;
+    }
+
+    .dato {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+    }
+
+    .label {
+      font-weight: bold;
+      color: #333;
+    }
+
+    .valore {
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+    }
+
+    hr {
+      margin: 1.2rem 0 1rem 0;
+      border: none;
+      border-top: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div class="dato"><span class="label" style="font-size: 2.0rem;" id="DatiAggiornati">-</span></div>
+  <h2 id="giorno">Caricamento data...</h2>
+
+  <!-- Prima sezione -->
+  <div class="dato"><span class="label">Dichiaranti:</span><span class="valore" id="dichiaranti">-</span></div>
+  <div class="dato"><span class="label">Coniugi:</span><span class="valore" id="coniugi">-</span></div>
+  <div class="dato"><span class="label">Totale:</span><span class="valore" id="totale">-</span></div>
+
+  <hr />
+
+  <!-- Seconda sezione -->
+  <div class="dato"><span class="label">730:</span><span class="valore" id="euro730">-</span></div>
+  <div class="dato"><span class="label">Precomp:</span><span class="valore" id="europrecomp">-</span></div>
+  <div class="dato"><span class="label">IMU/TASI:</span><span class="valore" id="euroimu">-</span></div>
+  <div class="dato"><span class="label">Totale:</span><span class="valore" id="eurototale">-</span></div>
+  
+  <!-- Differenza con giorno AP -->
+  <h2 id="GiornoAP">Caricamento data...</h2>
+    <!-- Prima sezione -->
+  <div class="dato"><span class="label">Dichiaranti:</span><span class="valore" id="DichiarantiAP">-</span></div>
+  <div class="dato"><span class="label">Coniugi:</span><span class="valore" id="ConiugiAP">-</span></div>
+  <div class="dato"><span class="label">Totale:</span><span class="valore" id="TotaleAP">-</span></div>
+  <hr />
+  <!-- Seconda sezione -->
+  <div class="dato"><span class="label">730:</span><span class="valore" id="Euro730AP">-</span></div>
+  <div class="dato"><span class="label">Precomp:</span><span class="valore" id="EuroPrecompAP">-</span></div>
+  <div class="dato"><span class="label">IMU/TASI:</span><span class="valore" id="EuroIMUAP">-</span></div>
+  <div class="dato"><span class="label">Totale:</span><span class="valore" id="EuroTotaleAP">-</span></div>
+
+  <!-- Totali -->
+  <h2>Totali</h2>
+    <!-- Prima sezione -->
+  <div class="dato"><span class="label">Dichiaranti:</span><span class="valore" id="DichiarantiTOT">-</span></div>
+  <div class="dato"><span class="label">Coniugi:</span><span class="valore" id="ConiugiTOT">-</span></div>
+  <div class="dato"><span class="label">Totale:</span><span class="valore" id="TotaleTOT">-</span></div>
+  <hr />
+  <!-- Seconda sezione -->
+  <div class="dato"><span class="label">730:</span><span class="valore" id="Euro730TOT">-</span></div>
+  <div class="dato"><span class="label">Precomp:</span><span class="valore" id="EuroPrecompTOT">-</span></div>
+  <div class="dato"><span class="label">IMU/TASI:</span><span class="valore" id="EuroIMUTOT">-</span></div>
+  <div class="dato"><span class="label">Totale:</span><span class="valore" id="EuroTotaleTOT">-</span></div>
+
+  <!-- Differenze Totali -->
+  <h2>Differenze Totali</h2>
+    <!-- Prima sezione -->
+  <div class="dato"><span class="label">Differenza:</span><span class="valore" id="TotaleDIF">-</span></div>
+  <div class="dato"><span class="label">Percentuale:</span><span class="valore" id="PercentualeDIF">-</span></div>
+  <hr />
+  <!-- Seconda sezione -->
+  <div class="dato"><span class="label">730:</span><span class="valore" id="Euro730DIF">-</span></div>
+  <div class="dato"><span class="label">Precomp:</span><span class="valore" id="EuroPrecompDIF">-</span></div>
+  <div class="dato"><span class="label">IMU/TASI:</span><span class="valore" id="EuroIMUDIF">-</span></div>
+  <div class="dato"><span class="label">Totale:</span><span class="valore" id="EuroTotaleDIF">-</span></div>
+
+  <!-- Appuntamenti Oggi -->
+  <h2>Appuntamenti Oggi</h2>
+  <div class="dato"><span class="label">Possibili:</span><span class="valore" id="AppPossibiliOggi">-</span></div>
+  <div class="dato"><span class="label">730:</span><span class="valore" id="App730Oggi">-</span></div>
+  <div class="dato"><span class="label">Liberi:</span><span class="valore" id="AppLiberiOggi">-</span></div>
+  <div class="dato"><span class="label">Blocchi:</span><span class="valore" id="AppBlocchiOggi">-</span></div>
+
+  <!-- Appuntamenti Domani -->
+  <h2>Appuntamenti Domani</h2>
+  <div class="dato"><span class="label">Possibili:</span><span class="valore" id="AppPossibiliDomani">-</span></div>
+  <div class="dato"><span class="label">730:</span><span class="valore" id="App730Domani">-</span></div>
+  <div class="dato"><span class="label">Liberi:</span><span class="valore" id="AppLiberiDomani">-</span></div>
+  <div class="dato"><span class="label">Blocchi:</span><span class="valore" id="AppBlocchiDomani">-</span></div>
+
+  <!-- Differenza con stesso giorno -->
+  <h2>Diff stesso giorno</h2>
+  <div class="dato"><span class="label">Dichiaranti:</span><span class="valore" id="DicStessoGiornoAP">-</span></div>
+  <div class="dato"><span class="label">Coniugi:</span><span class="valore" id="ConStessoGiornoAP">-</span></div>
+  <div class="dato"><span class="label">Totale:</span><span class="valore" id="TotStessoGiornoAP">-</span></div>
+
+  
+
+   <script>
+    async function caricaDati() {
+      try {
+        const response = await fetch("https://fraste77.github.io/StatPD/StatPD.json");
+        const json = await response.json();
+
+        document.getElementById("giorno").textContent = json.GiornoAC || "Data non disponibile";
+
+        document.getElementById("dichiaranti").textContent = json.DichiarantiAC ?? "-";
+        document.getElementById("coniugi").textContent = json.ConiugiAC ?? "-";
+        document.getElementById("totale").textContent = json.TotaleAC ?? "-";
+
+        document.getElementById("euro730").textContent = json.Euro730AC ?? "-";
+        document.getElementById("europrecomp").textContent = json.EuroPrecompAC ?? "-";
+        document.getElementById("euroimu").textContent = json.EuroIMUAC ?? "-";
+        document.getElementById("eurototale").textContent = json.EuroTotaleAC ?? "-";
+
+        document.getElementById("GiornoAP").textContent = json.GiornoAP || "Data non disponibile";
+        document.getElementById("DichiarantiAP").textContent = json.DichiarantiAP ?? "-";
+        document.getElementById("ConiugiAP").textContent = json.ConiugiAP ?? "-";
+        document.getElementById("TotaleAP").textContent = json.TotaleAP ?? "-";
+        
+        document.getElementById("Euro730AP").textContent = json.Euro730AP ?? "-";
+        document.getElementById("EuroPrecompAP").textContent = json.EuroPrecompAP ?? "-";
+        document.getElementById("EuroIMUAP").textContent = json.EuroIMUAP ?? "-";
+        document.getElementById("EuroTotaleAP").textContent = json.EuroTotaleAP ?? "-";
+
+        document.getElementById("DichiarantiTOT").textContent = json.DichiarantiTOT ?? "-";
+        document.getElementById("ConiugiTOT").textContent = json.ConiugiTOT ?? "-";
+        document.getElementById("TotaleTOT").textContent = json.TotaleTOT ?? "-";
+        
+        document.getElementById("Euro730TOT").textContent = json.Euro730TOT ?? "-";
+        document.getElementById("EuroPrecompTOT").textContent = json.EuroPrecompTOT ?? "-";
+        document.getElementById("EuroIMUTOT").textContent = json.EuroIMUTOT ?? "-";
+        document.getElementById("EuroTotaleTOT").textContent = json.EuroTotaleTOT ?? "-";
+
+        document.getElementById("TotaleDIF").textContent = json.TotaleDIF ?? "-";
+        document.getElementById("PercentualeDIF").textContent = json.PercentualeDIF ?? "-";
+        
+        document.getElementById("Euro730DIF").textContent = json.Euro730DIF ?? "-";
+        document.getElementById("EuroPrecompDIF").textContent = json.EuroPrecompDIF ?? "-";
+        document.getElementById("EuroIMUDIF").textContent = json.EuroIMUDIF ?? "-";
+        document.getElementById("EuroTotaleDIF").textContent = json.EuroTotaleDIF ?? "-";
+
+        document.getElementById("AppPossibiliOggi").textContent = json.AppPossibiliOggi ?? "-";
+        document.getElementById("App730Oggi").textContent = json.App730Oggi ?? "-";
+        document.getElementById("AppLiberiOggi").textContent = json.AppLiberiOggi ?? "-";
+        document.getElementById("AppBlocchiOggi").textContent = json.AppBlocchiOggi ?? "-";
+
+        document.getElementById("AppPossibiliDomani").textContent = json.AppPossibiliDomani ?? "-";
+        document.getElementById("App730Domani").textContent = json.App730Domani ?? "-";
+        document.getElementById("AppLiberiDomani").textContent = json.AppLiberiDomani ?? "-";
+        document.getElementById("AppBlocchiDomani").textContent = json.AppBlocchiDomani ?? "-";
+
+        document.getElementById("DicStessoGiornoAP").textContent = json.DicStessoGiornoAP ?? "-";
+        document.getElementById("ConStessoGiornoAP").textContent = json.ConStessoGiornoAP ?? "-";
+        document.getElementById("TotStessoGiornoAP").textContent = json.TotStessoGiornoAP ?? "-";
+        document.getElementById("DatiAggiornati").textContent = json.DatiAggiornati ?? "-";
+
+        // Evidenzia valori negativi in rosso o verdi per AP
+document.querySelectorAll('.valore').forEach(el => {
+  const val = el.textContent.trim();
+  const id = el.id;
+
+  if (val.startsWith('-')) {
+    el.style.color = 'red';
+  } else if (
+    ['DichiarantiAP', 'ConiugiAP', 'TotaleAP', 'Euro730AP', 'EuroPrecompAP', 'EuroIMUAP', 'EuroTotaleAP', 'TotaleDIF', 'PercentualeDIF', 'Euro730DIF', 'EuroPrecompDIF', 'EuroIMUDIF', 'EuroTotaleDIF'].includes(id) &&
+    val !== '-'
+  ) {
+    el.style.color = 'green';
+  } else {
+    el.style.color = 'black';
+  }
+});
+
+      } catch (error) {
+        console.error("Errore nel caricamento:", error);
+        document.getElementById("giorno").textContent = "Errore nel caricamento dei dati.";
+      }
+    }
+
+    caricaDati();
+  </script>
+</body>
+</html>
