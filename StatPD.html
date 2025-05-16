@@ -5,44 +5,64 @@
   <title>Statistica PD</title>
   <link rel="icon" href="StatCAAF.ico" type="image/x-icon">
   <style>
-    body {
-      font-family: sans-serif;
-      padding: 2rem;
-      max-width: 500px;
-      font-size: 2.4rem;
-    }
+   body {
+  font-family: 'Roboto', sans-serif;
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+  background-color: #f4f4f4;
+  color: #333;
+  font-size: 3rem;
+}
 
-    h2 {
-      color: #007acc;
-      margin-bottom: 1.5rem;
-      font-size: 3.0rem;
-    }
+h2 {
+  color: #007acc;
+  margin-bottom: 1.5rem;
+  font-size: 3.4rem;
+  text-align: center;
+}
 
-    .dato {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 0.5rem;
-    }
+.dato {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-    .label {
-      font-weight: bold;
-      color: #333;
-    }
+.label {
+  font-weight: bold;
+  color: #333;
+}
+    
+.valore {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
 
-    .valore {
-      text-align: right;
-      font-variant-numeric: tabular-nums;
-    }
+hr {
+  margin: 1.5rem 0;
+  border: none;
+  border-top: 2px solid #ccc;
+}
 
-    hr {
-      margin: 1.2rem 0 1rem 0;
-      border: none;
-      border-top: 1px solid #ccc;
-    }
+/* Effetti di transizione */
+.dato:hover {
+  background: #e0f7fa;
+  transform: scale(1.02);
+  transition: 0.3s ease-in-out;
+}
   </style>
 </head>
 <body>
-  <div class="dato"><span class="label" style="font-size: 2.0rem;" id="DatiAggiornati">-</span></div>
+ 
+  <div class="label" style="text-align: center; display: flex; justify-content: center; align-items: center;">
+  <span class="label" style="font-size: 2.2rem;" id="DatiAggiornati">-</span>
+  </div>
+  
   <h2 id="giorno">Caricamento data...</h2>
 
   <!-- Prima sezione -->
