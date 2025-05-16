@@ -185,16 +185,12 @@
             el.style.color = 'red';
           } else if (
             (id === 'DichiarantiAP' || id === 'ConiugiAP' || id === 'TotaleAP') &&
-            !isNaN(parseFloat(val.replace(',', '.')))
+            /^[\d,.]+$/.test(val)
           ) {
             el.style.color = 'green';
           } else {
             el.style.color = 'black';
           }
-        });
-        document.querySelectorAll('.valore').forEach(el => {
-          const val = el.textContent.trim();
-          el.style.color = val.startsWith('-') ? 'red' : 'black';
         });
 
       } catch (error) {
