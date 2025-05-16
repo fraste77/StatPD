@@ -117,7 +117,7 @@
 
   
 
- <script>
+   <script>
     async function caricaDati() {
       try {
         const response = await fetch("https://fraste77.github.io/StatPD/StatPD.json");
@@ -176,7 +176,22 @@
         document.getElementById("TotStessoGiornoAP").textContent = json.TotStessoGiornoAP ?? "-";
         document.getElementById("DatiAggiornati").textContent = json.DatiAggiornati ?? "-";
 
-        // 🎯 Colora i valori negativi in rosso, gli altri in nero
+        // Evidenzia valori negativi in rosso o verdi per AP
+        document.querySelectorAll('.valore').forEach(el => {
+          const val = el.textContent.trim();
+          const id = el.id;
+
+          if (val.startsWith('-')) {
+            el.style.color = 'red';
+          } else if (
+            (id === 'DichiarantiAP' || id === 'ConiugiAP' || id === 'TotaleAP') &&
+            !isNaN(parseFloat(val.replace(',', '.')))
+          ) {
+            el.style.color = 'green';
+          } else {
+            el.style.color = 'black';
+          }
+        });
         document.querySelectorAll('.valore').forEach(el => {
           const val = el.textContent.trim();
           el.style.color = val.startsWith('-') ? 'red' : 'black';
