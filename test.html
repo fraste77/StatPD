@@ -41,7 +41,7 @@
   </style>
 </head>
 <body>
-    <button onclick="caricaDati()" style="margin-bottom: 1.5rem; font-size: 3.0rem; padding: 0.5rem 1rem;">
+  <button onclick="caricaDati()" style="margin-bottom: 1.5rem; font-size: 3.0rem; padding: 0.5rem 1rem;">
     🔄 Ricarica Dati
   </button>
   <div class="dato"><span class="label" style="font-size: 2.0rem;" id="DatiAggiornati">-</span></div>
@@ -120,7 +120,7 @@
 
   
 
-  <script>
+ <script>
     async function caricaDati() {
       try {
         const response = await fetch("https://fraste77.github.io/StatPD/StatPD.json");
@@ -178,20 +178,19 @@
         document.getElementById("ConStessoGiornoAP").textContent = json.ConStessoGiornoAP ?? "-";
         document.getElementById("TotStessoGiornoAP").textContent = json.TotStessoGiornoAP ?? "-";
         document.getElementById("DatiAggiornati").textContent = json.DatiAggiornati ?? "-";
-        
+
+        // 🎯 Colora i valori negativi in rosso, gli altri in nero
+        document.querySelectorAll('.valore').forEach(el => {
+          const val = el.textContent.trim();
+          el.style.color = val.startsWith('-') ? 'red' : 'black';
+        });
+
       } catch (error) {
         console.error("Errore nel caricamento:", error);
         document.getElementById("giorno").textContent = "Errore nel caricamento dei dati.";
       }
     }
-document.querySelectorAll('.valore').forEach(el => {
-  const val = el.textContent.trim();
-  if (val.startsWith('-')) {
-    el.style.color = 'red';
-  } else {
-    el.style.color = 'black';
-  }
-});
+
     caricaDati();
   </script>
 </body>
