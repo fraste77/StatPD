@@ -1,5 +1,5 @@
 {
-  "GiornoAC": "sabato 17 maggio 2025",
+  "GiornoAC": "domenica 18 maggio 2025",
   "DichiarantiAC": "0",
   "ConiugiAC": "0",
   "TotaleAC": "0",
@@ -7,7 +7,7 @@
   "EuroPrecompAC": "0,00 €",
   "EuroIMUAC": "0,00 €",
   "EuroTotaleAC": "0,00 €",
-  "GiornoAP": "Differenza con sabato 18 maggio 2024",
+  "GiornoAP": "Differenza con domenica 19 maggio 2024",
   "DichiarantiAP": "0",
   "ConiugiAP": "0",
   "TotaleAP": "0",
@@ -32,12 +32,12 @@
   "App730Oggi": "0",
   "AppLiberiOggi": "0",
   "AppBlocchiOggi": "0",
-  "AppPossibiliDomani": "0",
-  "App730Domani": "0",
-  "AppLiberiDomani": "0",
-  "AppBlocchiDomani": "0",
+  "AppPossibiliDomani": "1.162",
+  "App730Domani": "1.093",
+  "AppLiberiDomani": "11",
+  "AppBlocchiDomani": "24",
   "DicStessoGiornoAP": "1.370",
   "ConStessoGiornoAP": "188",
   "TotStessoGiornoAP": "1.558",
-  "DatiAggiornati": "Dati aggiornati al 17/05/2025 20:31:58"
+  "DatiAggiornati": "Dati aggiornati al 18/05/2025 08:37:06"
 }
