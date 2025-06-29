@@ -1,5 +1,5 @@
 {
-  "GiornoAC": "sabato 28 giugno 2025",
+  "GiornoAC": "domenica 29 giugno 2025",
   "DichiarantiAC": "0",
   "ConiugiAC": "0",
   "TotaleAC": "0",
@@ -7,7 +7,7 @@
   "EuroPrecompAC": "0,00 €",
   "EuroIMUAC": "0,00 €",
   "EuroTotaleAC": "0,00 €",
-  "GiornoAP": "Differenza con sabato 29 giugno 2024",
+  "GiornoAP": "Differenza con domenica 30 giugno 2024",
   "DichiarantiAP": "0",
   "ConiugiAP": "0",
   "TotaleAP": "0",
@@ -32,12 +32,12 @@
   "App730Oggi": "0",
   "AppLiberiOggi": "0",
   "AppBlocchiOggi": "0",
-  "AppPossibiliDomani": "0",
-  "App730Domani": "0",
-  "AppLiberiDomani": "0",
-  "AppBlocchiDomani": "0",
+  "AppPossibiliDomani": "1.386",
+  "App730Domani": "997",
+  "AppLiberiDomani": "48",
+  "AppBlocchiDomani": "240",
   "DicStessoGiornoAP": "724",
   "ConStessoGiornoAP": "88",
   "TotStessoGiornoAP": "812",
-  "DatiAggiornati": "Dati aggiornati al 28/06/2025 20:32:11"
+  "DatiAggiornati": "Dati aggiornati al 29/06/2025 08:37:11"
 }
