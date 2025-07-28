@@ -1,16 +1,16 @@
 {
   "GiornoAC": "lunedì 28 luglio 2025",
-  "DichiarantiAC": "51",
+  "DichiarantiAC": "52",
   "ConiugiAC": "8",
-  "TotaleAC": "59",
+  "TotaleAC": "60",
   "Euro730AC": "1.601,75 €",
   "EuroPrecompAC": "304,87 €",
   "EuroIMUAC": "0,00 €",
   "EuroTotaleAC": "1.918,92 €",
   "GiornoAP": "Differenza con lunedì 29 luglio 2024",
-  "DichiarantiAP": "-42",
+  "DichiarantiAP": "-41",
   "ConiugiAP": "-4",
-  "TotaleAP": "-46",
+  "TotaleAP": "-45",
   "Euro730AP": "-1.288,59 €",
   "EuroPrecompAP": "50,79 €",
   "EuroIMUAP": "-17,21 €",
@@ -29,8 +29,8 @@
   "EuroIMUDIF": "4.379,74 €",
   "EuroTotaleDIF": "-35.679,40 €",
   "AppPossibiliOggi": "378",
-  "App730Oggi": "111",
-  "AppLiberiOggi": "47",
+  "App730Oggi": "110",
+  "AppLiberiOggi": "48",
   "AppBlocchiOggi": "193",
   "AppPossibiliDomani": "392",
   "App730Domani": "189",
@@ -39,5 +39,5 @@
   "DicStessoGiornoAP": "51",
   "ConStessoGiornoAP": "-66",
   "TotStessoGiornoAP": "-15",
-  "DatiAggiornati": "Dati aggiornati al 28/07/2025 14:42:43"
+  "DatiAggiornati": "Dati aggiornati al 28/07/2025 14:47:44"
 }
