@@ -1,5 +1,5 @@
 {
-  "GiornoAC": "sabato 2 agosto 2025",
+  "GiornoAC": "domenica 3 agosto 2025",
   "DichiarantiAC": "0",
   "ConiugiAC": "0",
   "TotaleAC": "0",
@@ -7,7 +7,7 @@
   "EuroPrecompAC": "0,00 €",
   "EuroIMUAC": "0,00 €",
   "EuroTotaleAC": "0,00 €",
-  "GiornoAP": "Differenza con sabato 3 agosto 2024",
+  "GiornoAP": "Differenza con domenica 4 agosto 2024",
   "DichiarantiAP": "0",
   "ConiugiAP": "0",
   "TotaleAP": "0",
@@ -32,12 +32,12 @@
   "App730Oggi": "0",
   "AppLiberiOggi": "0",
   "AppBlocchiOggi": "0",
-  "AppPossibiliDomani": "0",
-  "App730Domani": "0",
-  "AppLiberiDomani": "0",
-  "AppBlocchiDomani": "0",
+  "AppPossibiliDomani": "399",
+  "App730Domani": "151",
+  "AppLiberiDomani": "29",
+  "AppBlocchiDomani": "164",
   "DicStessoGiornoAP": "220",
   "ConStessoGiornoAP": "-51",
   "TotStessoGiornoAP": "169",
-  "DatiAggiornati": "Dati aggiornati al 02/08/2025 20:30:47"
+  "DatiAggiornati": "Dati aggiornati al 03/08/2025 08:35:50"
 }
