@@ -6,6 +6,7 @@
   "Euro730AC": "1.323,04 €",
   "EuroPrecompAC": "537,61 €",
   "EuroIMUAC": "18,03 €",
+  "EuroAltroAC": "0 €",
   "EuroTotaleAC": "1.882,78 €",
   "GiornoAP": "Differenza con giovedì 8 agosto 2024",
   "DichiarantiAP": "-65",
@@ -14,6 +15,7 @@
   "Euro730AP": "-1.858,30 €",
   "EuroPrecompAP": "127,83 €",
   "EuroIMUAP": "-54,91 €",
+  "EuroAltroAP": "0 €",
   "EuroTotaleAP": "-1.785,38 €",
   "DichiarantiTOT": "50.669",
   "ConiugiTOT": "9.252",
@@ -21,12 +23,14 @@
   "Euro730TOT": "1.862.773,76 €",
   "EuroPrecompTOT": "135.150,74 €",
   "EuroIMUTOT": "75.299,43 €",
+  "EuroAltroTOT": "0 €",
   "EuroTotaleTOT": "2.082.301,81 €",
   "TotaleDIF": "-3.114",
   "PercentualeDIF": "-4,94%",
   "Euro730DIF": "-1.407,15 €",
   "EuroPrecompDIF": "-6.951,17 €",
   "EuroIMUDIF": "5.179,70 €",
+  "EuroAltroDIF": "0 €",
   "EuroTotaleDIF": "2.810,51 €",
   "AppPossibiliOggi": "430",
   "App730Oggi": "144",
@@ -40,4 +44,5 @@
   "ConStessoGiornoAP": "-65",
   "TotStessoGiornoAP": "127",
   "DatiAggiornati": "Dati aggiornati al 07/08/2025 11:31:12"
+
 }
