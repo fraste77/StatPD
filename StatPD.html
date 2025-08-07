@@ -76,6 +76,7 @@ hr {
   <div class="dato"><span class="label">730:</span><span class="valore" id="euro730">-</span></div>
   <div class="dato"><span class="label">Precomp:</span><span class="valore" id="europrecomp">-</span></div>
   <div class="dato"><span class="label">IMU/TASI:</span><span class="valore" id="euroimu">-</span></div>
+  <div class="dato"><span class="label">730 Altro:</span><span class="valore" id="euroAltro">-</span></div>
   <div class="dato"><span class="label">Totale:</span><span class="valore" style="font-weight: bold; font-size: 3.4rem" id="eurototale">-</span></div>
   
   <!-- Differenza con giorno AP -->
@@ -89,6 +90,7 @@ hr {
   <div class="dato"><span class="label">730:</span><span class="valore" id="Euro730AP">-</span></div>
   <div class="dato"><span class="label">Precomp:</span><span class="valore" id="EuroPrecompAP">-</span></div>
   <div class="dato"><span class="label">IMU/TASI:</span><span class="valore" id="EuroIMUAP">-</span></div>
+  <div class="dato"><span class="label">730 Altro:</span><span class="valore" id="EuroAltroAP">-</span></div>
   <div class="dato"><span class="label">Totale:</span><span class="valore" style="font-weight: bold; font-size: 3.4rem" id="EuroTotaleAP">-</span></div>
 
   <!-- Totali -->
@@ -102,6 +104,7 @@ hr {
   <div class="dato"><span class="label">730:</span><span class="valore" id="Euro730TOT">-</span></div>
   <div class="dato"><span class="label">Precomp:</span><span class="valore" id="EuroPrecompTOT">-</span></div>
   <div class="dato"><span class="label">IMU/TASI:</span><span class="valore" id="EuroIMUTOT">-</span></div>
+  <div class="dato"><span class="label">730 Altro:</span><span class="valore" id="EuroAltroTOT">-</span></div>
   <div class="dato"><span class="label">Totale:</span><span class="valore" style="font-weight: bold; font-size: 3.4rem" id="EuroTotaleTOT">-</span></div>
 
   <!-- Differenze Totali -->
@@ -114,6 +117,7 @@ hr {
   <div class="dato"><span class="label">730:</span><span class="valore" id="Euro730DIF">-</span></div>
   <div class="dato"><span class="label">Precomp:</span><span class="valore" id="EuroPrecompDIF">-</span></div>
   <div class="dato"><span class="label">IMU/TASI:</span><span class="valore" id="EuroIMUDIF">-</span></div>
+  <div class="dato"><span class="label">730 Altro:</span><span class="valore" id="EuroAltroDIF">-</span></div>
   <div class="dato"><span class="label">Totale:</span><span class="valore" style="font-weight: bold; font-size: 3.4rem" id="EuroTotaleDIF">-</span></div>
 
   <!-- Appuntamenti Oggi -->
@@ -153,6 +157,7 @@ hr {
         document.getElementById("euro730").textContent = json.Euro730AC ?? "-";
         document.getElementById("europrecomp").textContent = json.EuroPrecompAC ?? "-";
         document.getElementById("euroimu").textContent = json.EuroIMUAC ?? "-";
+        document.getElementById("euroAltro").textContent = json.EuroAltroAC ?? "-";
         document.getElementById("eurototale").textContent = json.EuroTotaleAC ?? "-";
 
         document.getElementById("GiornoAP").textContent = json.GiornoAP || "Data non disponibile";
@@ -163,6 +168,7 @@ hr {
         document.getElementById("Euro730AP").textContent = json.Euro730AP ?? "-";
         document.getElementById("EuroPrecompAP").textContent = json.EuroPrecompAP ?? "-";
         document.getElementById("EuroIMUAP").textContent = json.EuroIMUAP ?? "-";
+        document.getElementById("EuroAltroAP").textContent = json.EuroAltroAP ?? "-";
         document.getElementById("EuroTotaleAP").textContent = json.EuroTotaleAP ?? "-";
 
         document.getElementById("DichiarantiTOT").textContent = json.DichiarantiTOT ?? "-";
@@ -172,6 +178,7 @@ hr {
         document.getElementById("Euro730TOT").textContent = json.Euro730TOT ?? "-";
         document.getElementById("EuroPrecompTOT").textContent = json.EuroPrecompTOT ?? "-";
         document.getElementById("EuroIMUTOT").textContent = json.EuroIMUTOT ?? "-";
+        document.getElementById("EuroAltroTOT").textContent = json.EuroAltroTOT ?? "-";
         document.getElementById("EuroTotaleTOT").textContent = json.EuroTotaleTOT ?? "-";
 
         document.getElementById("TotaleDIF").textContent = json.TotaleDIF ?? "-";
@@ -180,6 +187,7 @@ hr {
         document.getElementById("Euro730DIF").textContent = json.Euro730DIF ?? "-";
         document.getElementById("EuroPrecompDIF").textContent = json.EuroPrecompDIF ?? "-";
         document.getElementById("EuroIMUDIF").textContent = json.EuroIMUDIF ?? "-";
+        document.getElementById("EuroAltroDIF").textContent = json.EuroAltroDIF ?? "-";
         document.getElementById("EuroTotaleDIF").textContent = json.EuroTotaleDIF ?? "-";
 
         document.getElementById("AppPossibiliOggi").textContent = json.AppPossibiliOggi ?? "-";
@@ -205,7 +213,7 @@ document.querySelectorAll('.valore').forEach(el => {
   if (val.startsWith('-')) {
     el.style.color = 'red';
   } else if (
-    ['DichiarantiAP', 'ConiugiAP', 'TotaleAP', 'Euro730AP', 'EuroPrecompAP', 'EuroIMUAP', 'EuroTotaleAP', 'TotaleDIF', 'PercentualeDIF', 'Euro730DIF', 'EuroPrecompDIF', 'EuroIMUDIF', 'EuroTotaleDIF', 'DicStessoGiornoAP', 'ConStessoGiornoAP', 'TotStessoGiornoAP'].includes(id) &&
+    ['DichiarantiAP', 'ConiugiAP', 'TotaleAP', 'Euro730AP', 'EuroPrecompAP', 'EuroIMUAP', 'EuroAltroAP','EuroTotaleAP', 'TotaleDIF', 'PercentualeDIF', 'Euro730DIF', 'EuroPrecompDIF', 'EuroIMUDIF', 'EuroAltroDIF', 'EuroTotaleDIF', 'DicStessoGiornoAP', 'ConStessoGiornoAP', 'TotStessoGiornoAP'].includes(id) &&
     val !== '-'
   ) {
     el.style.color = 'green';
