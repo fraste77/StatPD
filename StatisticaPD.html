@@ -129,42 +129,18 @@ hr {
         document.getElementById("coniugi").textContent = json.ConiugiAC ?? "-";
         document.getElementById("totale").textContent = json.TotaleAC ?? "-";
 
-        document.getElementById("euro730").textContent = json.Euro730AC ?? "-";
-        document.getElementById("europrecomp").textContent = json.EuroPrecompAC ?? "-";
-        document.getElementById("euroimu").textContent = json.EuroIMUAC ?? "-";
-        document.getElementById("euroAltro").textContent = json.EuroAltroAC ?? "-";
-        document.getElementById("eurototale").textContent = json.EuroTotaleAC ?? "-";
-
         document.getElementById("GiornoAP").textContent = json.GiornoAP || "Data non disponibile";
         document.getElementById("DichiarantiAP").textContent = json.DichiarantiAP ?? "-";
         document.getElementById("ConiugiAP").textContent = json.ConiugiAP ?? "-";
         document.getElementById("TotaleAP").textContent = json.TotaleAP ?? "-";
-        
-        document.getElementById("Euro730AP").textContent = json.Euro730AP ?? "-";
-        document.getElementById("EuroPrecompAP").textContent = json.EuroPrecompAP ?? "-";
-        document.getElementById("EuroIMUAP").textContent = json.EuroIMUAP ?? "-";
-        document.getElementById("EuroAltroAP").textContent = json.EuroAltroAP ?? "-";
-        document.getElementById("EuroTotaleAP").textContent = json.EuroTotaleAP ?? "-";
 
         document.getElementById("DichiarantiTOT").textContent = json.DichiarantiTOT ?? "-";
         document.getElementById("ConiugiTOT").textContent = json.ConiugiTOT ?? "-";
         document.getElementById("TotaleTOT").textContent = json.TotaleTOT ?? "-";
         
-        document.getElementById("Euro730TOT").textContent = json.Euro730TOT ?? "-";
-        document.getElementById("EuroPrecompTOT").textContent = json.EuroPrecompTOT ?? "-";
-        document.getElementById("EuroIMUTOT").textContent = json.EuroIMUTOT ?? "-";
-        document.getElementById("EuroAltroTOT").textContent = json.EuroAltroTOT ?? "-";
-        document.getElementById("EuroTotaleTOT").textContent = json.EuroTotaleTOT ?? "-";
-
         document.getElementById("TotaleDIF").textContent = json.TotaleDIF ?? "-";
         document.getElementById("PercentualeDIF").textContent = json.PercentualeDIF ?? "-";
         
-        document.getElementById("Euro730DIF").textContent = json.Euro730DIF ?? "-";
-        document.getElementById("EuroPrecompDIF").textContent = json.EuroPrecompDIF ?? "-";
-        document.getElementById("EuroIMUDIF").textContent = json.EuroIMUDIF ?? "-";
-        document.getElementById("EuroAltroDIF").textContent = json.EuroAltroDIF ?? "-";
-        document.getElementById("EuroTotaleDIF").textContent = json.EuroTotaleDIF ?? "-";
-
         document.getElementById("AppPossibiliOggi").textContent = json.AppPossibiliOggi ?? "-";
         document.getElementById("App730Oggi").textContent = json.App730Oggi ?? "-";
         document.getElementById("AppLiberiOggi").textContent = json.AppLiberiOggi ?? "-";
@@ -188,7 +164,7 @@ document.querySelectorAll('.valore').forEach(el => {
   if (val.startsWith('-')) {
     el.style.color = 'red';
   } else if (
-    ['DichiarantiAP', 'ConiugiAP', 'TotaleAP', 'Euro730AP', 'EuroPrecompAP', 'EuroIMUAP', 'EuroAltroAP','EuroTotaleAP', 'TotaleDIF', 'PercentualeDIF', 'Euro730DIF', 'EuroPrecompDIF', 'EuroIMUDIF', 'EuroAltroDIF', 'EuroTotaleDIF', 'DicStessoGiornoAP', 'ConStessoGiornoAP', 'TotStessoGiornoAP'].includes(id) &&
+    ['DichiarantiAP', 'ConiugiAP', 'TotaleAP', 'TotaleDIF', 'PercentualeDIF', 'DicStessoGiornoAP', 'ConStessoGiornoAP', 'TotStessoGiornoAP'].includes(id) &&
     val !== '-'
   ) {
     el.style.color = 'green';
