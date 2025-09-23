@@ -94,21 +94,6 @@ hr {
   <div class="dato"><span class="label">Differenza:</span><span class="valore" style="font-weight: bold; font-size: 3.4rem" id="TotaleDIF">-</span></div>
   <div class="dato"><span class="label">Percentuale:</span><span class="valore" style="font-weight: bold; font-size: 3.4rem" id="PercentualeDIF">-</span></div>
 
-
-  <!-- Appuntamenti Oggi -->
-  <h2>Appuntamenti Oggi</h2>
-  <div class="dato"><span class="label">Possibili:</span><span class="valore" id="AppPossibiliOggi">-</span></div>
-  <div class="dato"><span class="label">730:</span><span class="valore" id="App730Oggi">-</span></div>
-  <div class="dato"><span class="label">Liberi:</span><span class="valore" id="AppLiberiOggi">-</span></div>
-  <div class="dato"><span class="label">Blocchi:</span><span class="valore" id="AppBlocchiOggi">-</span></div>
-
-  <!-- Appuntamenti Domani -->
-  <h2>Appuntamenti Domani</h2>
-  <div class="dato"><span class="label">Possibili:</span><span class="valore" id="AppPossibiliDomani">-</span></div>
-  <div class="dato"><span class="label">730:</span><span class="valore" id="App730Domani">-</span></div>
-  <div class="dato"><span class="label">Liberi:</span><span class="valore" id="AppLiberiDomani">-</span></div>
-  <div class="dato"><span class="label">Blocchi:</span><span class="valore" id="AppBlocchiDomani">-</span></div>
-
   <!-- Differenza con stesso giorno -->
   <h2>Diff stesso giorno</h2>
   <div class="dato"><span class="label">Dichiaranti:</span><span class="valore" id="DicStessoGiornoAP">-</span></div>
@@ -140,16 +125,6 @@ hr {
         
         document.getElementById("TotaleDIF").textContent = json.TotaleDIF ?? "-";
         document.getElementById("PercentualeDIF").textContent = json.PercentualeDIF ?? "-";
-        
-        document.getElementById("AppPossibiliOggi").textContent = json.AppPossibiliOggi ?? "-";
-        document.getElementById("App730Oggi").textContent = json.App730Oggi ?? "-";
-        document.getElementById("AppLiberiOggi").textContent = json.AppLiberiOggi ?? "-";
-        document.getElementById("AppBlocchiOggi").textContent = json.AppBlocchiOggi ?? "-";
-
-        document.getElementById("AppPossibiliDomani").textContent = json.AppPossibiliDomani ?? "-";
-        document.getElementById("App730Domani").textContent = json.App730Domani ?? "-";
-        document.getElementById("AppLiberiDomani").textContent = json.AppLiberiDomani ?? "-";
-        document.getElementById("AppBlocchiDomani").textContent = json.AppBlocchiDomani ?? "-";
 
         document.getElementById("DicStessoGiornoAP").textContent = json.DicStessoGiornoAP ?? "-";
         document.getElementById("ConStessoGiornoAP").textContent = json.ConStessoGiornoAP ?? "-";
