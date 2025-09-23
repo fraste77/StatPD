@@ -94,12 +94,6 @@ hr {
   <div class="dato"><span class="label">Differenza:</span><span class="valore" style="font-weight: bold; font-size: 3.4rem" id="TotaleDIF">-</span></div>
   <div class="dato"><span class="label">Percentuale:</span><span class="valore" style="font-weight: bold; font-size: 3.4rem" id="PercentualeDIF">-</span></div>
 
-  <!-- Differenza con stesso giorno -->
-  <h2>Diff stesso giorno</h2>
-  <div class="dato"><span class="label">Dichiaranti:</span><span class="valore" id="DicStessoGiornoAP">-</span></div>
-  <div class="dato"><span class="label">Coniugi:</span><span class="valore" id="ConStessoGiornoAP">-</span></div>
-  <div class="dato"><span class="label">Totale:</span><span class="valore" id="TotStessoGiornoAP">-</span></div>
-
   
 
    <script>
@@ -126,9 +120,6 @@ hr {
         document.getElementById("TotaleDIF").textContent = json.TotaleDIF ?? "-";
         document.getElementById("PercentualeDIF").textContent = json.PercentualeDIF ?? "-";
 
-        document.getElementById("DicStessoGiornoAP").textContent = json.DicStessoGiornoAP ?? "-";
-        document.getElementById("ConStessoGiornoAP").textContent = json.ConStessoGiornoAP ?? "-";
-        document.getElementById("TotStessoGiornoAP").textContent = json.TotStessoGiornoAP ?? "-";
         document.getElementById("DatiAggiornati").textContent = json.DatiAggiornati ?? "-";
 
         // Evidenzia valori negativi in rosso o verdi per AP
@@ -139,7 +130,7 @@ document.querySelectorAll('.valore').forEach(el => {
   if (val.startsWith('-')) {
     el.style.color = 'red';
   } else if (
-    ['DichiarantiAP', 'ConiugiAP', 'TotaleAP', 'TotaleDIF', 'PercentualeDIF', 'DicStessoGiornoAP', 'ConStessoGiornoAP', 'TotStessoGiornoAP'].includes(id) &&
+    ['DichiarantiAP', 'ConiugiAP', 'TotaleAP', 'TotaleDIF', 'PercentualeDIF' ].includes(id) &&
     val !== '-'
   ) {
     el.style.color = 'green';
