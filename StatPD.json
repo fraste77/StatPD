@@ -1,17 +1,17 @@
 {
   "GiornoAC": "giovedì 25 settembre 2025",
-  "DichiarantiAC": "30",
-  "ConiugiAC": "6",
-  "TotaleAC": "36",
+  "DichiarantiAC": "31",
+  "ConiugiAC": "7",
+  "TotaleAC": "38",
   "Euro730AC": "1.156,64 €",
   "EuroPrecompAC": "71,31 €",
   "EuroIMUAC": "0,00 €",
   "EuroAltroAC": "0,00 €",
   "EuroTotaleAC": "1.227,95 €",
   "GiornoAP": "Differenza con giovedì 26 settembre 2024",
-  "DichiarantiAP": "-153",
-  "ConiugiAP": "-11",
-  "TotaleAP": "-164",
+  "DichiarantiAP": "-152",
+  "ConiugiAP": "-10",
+  "TotaleAP": "-162",
   "Euro730AP": "-4.083,04 €",
   "EuroPrecompAP": "-764,69 €",
   "EuroIMUAP": "-55,73 €",
@@ -43,5 +43,5 @@
   "DicStessoGiornoAP": "263",
   "ConStessoGiornoAP": "-59",
   "TotStessoGiornoAP": "204",
-  "DatiAggiornati": "Dati aggiornati al 25/09/2025 10:14:53"
+  "DatiAggiornati": "Dati aggiornati al 25/09/2025 10:19:54"
 }
