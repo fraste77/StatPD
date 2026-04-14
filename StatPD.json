@@ -1,17 +1,17 @@
 {
   "GiornoAC": "martedì 14 aprile 2026",
-  "DichiarantiAC": "479",
+  "DichiarantiAC": "480",
   "ConiugiAC": "71",
-  "TotaleAC": "550",
+  "TotaleAC": "551",
   "Euro730AC": "16.580,97 €",
   "EuroPrecompAC": "477,86 €",
   "EuroIMUAC": "438,51 €",
   "EuroAltroAC": "41,80 €",
   "EuroTotaleAC": "17.539,14 €",
   "GiornoAP": "Differenza con martedì 15 aprile 2025",
-  "DichiarantiAP": "-61",
+  "DichiarantiAP": "-60",
   "ConiugiAP": "-25",
-  "TotaleAP": "-86",
+  "TotaleAP": "-85",
   "Euro730AP": "-3.352,19 €",
   "EuroPrecompAP": "-235,22 €",
   "EuroIMUAP": "-617,13 €",
@@ -43,5 +43,5 @@
   "DicStessoGiornoAP": "-866",
   "ConStessoGiornoAP": "-163",
   "TotStessoGiornoAP": "-1.029",
-  "DatiAggiornati": "Dati aggiornati al 14/04/2026 19:34:36"
+  "DatiAggiornati": "Dati aggiornati al 14/04/2026 19:39:36"
 }
