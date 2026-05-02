@@ -1,5 +1,5 @@
 {
-  "GiornoAC": "venerdì 1 maggio 2026",
+  "GiornoAC": "sabato 2 maggio 2026",
   "DichiarantiAC": "0",
   "ConiugiAC": "0",
   "TotaleAC": "0",
@@ -8,15 +8,15 @@
   "EuroIMUAC": "0,00 €",
   "EuroAltroAC": "0,00 €",
   "EuroTotaleAC": "0,00 €",
-  "GiornoAP": "Differenza con venerdì 2 maggio 2025",
-  "DichiarantiAP": "-719",
-  "ConiugiAP": "-130",
-  "TotaleAP": "-849",
-  "Euro730AP": "-27.600,85 €",
-  "EuroPrecompAP": "-990,13 €",
-  "EuroIMUAP": "-870,39 €",
-  "EuroAltroAP": "-127,06 €",
-  "EuroTotaleAP": "-29.588,43 €",
+  "GiornoAP": "Differenza con sabato 3 maggio 2025",
+  "DichiarantiAP": "0",
+  "ConiugiAP": "0",
+  "TotaleAP": "0",
+  "Euro730AP": "0,00 €",
+  "EuroPrecompAP": "0,00 €",
+  "EuroIMUAP": "0,00 €",
+  "EuroAltroAP": "0,00 €",
+  "EuroTotaleAP": "0,00 €",
   "DichiarantiTOT": "10.225",
   "ConiugiTOT": "1.927",
   "TotaleTOT": "12.152",
@@ -43,5 +43,5 @@
   "DicStessoGiornoAP": "178",
   "ConStessoGiornoAP": "152",
   "TotStessoGiornoAP": "330",
-  "DatiAggiornati": "Dati aggiornati al 01/05/2026 20:33:21"
+  "DatiAggiornati": "Dati aggiornati al 02/05/2026 08:38:27"
 }
