@@ -1,17 +1,17 @@
 {
   "GiornoAC": "venerdì 22 maggio 2026",
-  "DichiarantiAC": "402",
+  "DichiarantiAC": "403",
   "ConiugiAC": "73",
-  "TotaleAC": "475",
+  "TotaleAC": "476",
   "Euro730AC": "15.335,01 €",
   "EuroPrecompAC": "569,67 €",
   "EuroIMUAC": "856,53 €",
   "EuroAltroAC": "226,24 €",
   "EuroTotaleAC": "16.987,45 €",
   "GiornoAP": "Differenza con venerdì 23 maggio 2025",
-  "DichiarantiAP": "-370",
+  "DichiarantiAP": "-369",
   "ConiugiAP": "-81",
-  "TotaleAP": "-451",
+  "TotaleAP": "-450",
   "Euro730AP": "-15.243,04 €",
   "EuroPrecompAP": "-1.027,82 €",
   "EuroIMUAP": "-636,78 €",
@@ -43,5 +43,5 @@
   "DicStessoGiornoAP": "-518",
   "ConStessoGiornoAP": "-26",
   "TotStessoGiornoAP": "-544",
-  "DatiAggiornati": "Dati aggiornati al 22/05/2026 14:02:21"
+  "DatiAggiornati": "Dati aggiornati al 22/05/2026 14:07:21"
 }
