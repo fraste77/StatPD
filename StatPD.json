@@ -1,5 +1,5 @@
 {
-  "GiornoAC": "sabato 13 giugno 2026",
+  "GiornoAC": "domenica 14 giugno 2026",
   "DichiarantiAC": "0",
   "ConiugiAC": "0",
   "TotaleAC": "0",
@@ -8,7 +8,7 @@
   "EuroIMUAC": "0,00 €",
   "EuroAltroAC": "0,00 €",
   "EuroTotaleAC": "0,00 €",
-  "GiornoAP": "Differenza con sabato 14 giugno 2025",
+  "GiornoAP": "Differenza con domenica 15 giugno 2025",
   "DichiarantiAP": "0",
   "ConiugiAP": "0",
   "TotaleAP": "0",
@@ -36,12 +36,12 @@
   "App730Oggi": "0",
   "AppLiberiOggi": "0",
   "AppBlocchiOggi": "0",
-  "AppPossibiliDomani": "0",
-  "App730Domani": "0",
-  "AppLiberiDomani": "0",
-  "AppBlocchiDomani": "0",
+  "AppPossibiliDomani": "1.124",
+  "App730Domani": "1.020",
+  "AppLiberiDomani": "23",
+  "AppBlocchiDomani": "18",
   "DicStessoGiornoAP": "-17",
   "ConStessoGiornoAP": "-50",
   "TotStessoGiornoAP": "-67",
-  "DatiAggiornati": "Dati aggiornati al 13/06/2026 20:32:24"
+  "DatiAggiornati": "Dati aggiornati al 14/06/2026 08:37:30"
 }
