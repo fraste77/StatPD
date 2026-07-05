@@ -1,5 +1,5 @@
 {
-  "GiornoAC": "sabato 4 luglio 2026",
+  "GiornoAC": "domenica 5 luglio 2026",
   "DichiarantiAC": "0",
   "ConiugiAC": "0",
   "TotaleAC": "0",
@@ -8,7 +8,7 @@
   "EuroIMUAC": "0,00 €",
   "EuroAltroAC": "0,00 €",
   "EuroTotaleAC": "0,00 €",
-  "GiornoAP": "Differenza con sabato 5 luglio 2025",
+  "GiornoAP": "Differenza con domenica 6 luglio 2025",
   "DichiarantiAP": "0",
   "ConiugiAP": "0",
   "TotaleAP": "0",
@@ -36,12 +36,12 @@
   "App730Oggi": "0",
   "AppLiberiOggi": "0",
   "AppBlocchiOggi": "0",
-  "AppPossibiliDomani": "0",
-  "App730Domani": "0",
-  "AppLiberiDomani": "0",
-  "AppBlocchiDomani": "0",
+  "AppPossibiliDomani": "1.098",
+  "App730Domani": "793",
+  "AppLiberiDomani": "217",
+  "AppBlocchiDomani": "15",
   "DicStessoGiornoAP": "-175",
   "ConStessoGiornoAP": "-26",
   "TotStessoGiornoAP": "-201",
-  "DatiAggiornati": "Dati aggiornati al 04/07/2026 20:31:06"
+  "DatiAggiornati": "Dati aggiornati al 05/07/2026 08:36:11"
 }
