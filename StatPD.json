@@ -1,17 +1,17 @@
 {
   "GiornoAC": "martedì 21 luglio 2026",
-  "DichiarantiAC": "135",
+  "DichiarantiAC": "136",
   "ConiugiAC": "13",
-  "TotaleAC": "148",
+  "TotaleAC": "149",
   "Euro730AC": "4.170,42 €",
   "EuroPrecompAC": "509,81 €",
   "EuroIMUAC": "139,34 €",
   "EuroAltroAC": "303,26 €",
   "EuroTotaleAC": "5.122,83 €",
   "GiornoAP": "Differenza con martedì 22 luglio 2025",
-  "DichiarantiAP": "-19",
+  "DichiarantiAP": "-18",
   "ConiugiAP": "-4",
-  "TotaleAP": "-23",
+  "TotaleAP": "-22",
   "Euro730AP": "-1.113,54 €",
   "EuroPrecompAP": "-536,76 €",
   "EuroIMUAP": "54,10 €",
@@ -33,7 +33,7 @@
   "EuroAltroDIF": "276,11 €",
   "EuroTotaleDIF": "-141.507,35 €",
   "AppPossibiliOggi": "168",
-  "App730Oggi": "146",
+  "App730Oggi": "145",
   "AppLiberiOggi": "45",
   "AppBlocchiOggi": "16",
   "AppPossibiliDomani": "168",
@@ -43,5 +43,5 @@
   "DicStessoGiornoAP": "-815",
   "ConStessoGiornoAP": "-133",
   "TotStessoGiornoAP": "-948",
-  "DatiAggiornati": "Dati aggiornati al 21/07/2026 16:32:43"
+  "DatiAggiornati": "Dati aggiornati al 21/07/2026 16:37:45"
 }
