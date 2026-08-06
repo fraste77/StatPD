@@ -1,17 +1,17 @@
 {
   "GiornoAC": "giovedì 6 agosto 2026",
-  "DichiarantiAC": "28",
+  "DichiarantiAC": "29",
   "ConiugiAC": "5",
-  "TotaleAC": "33",
+  "TotaleAC": "34",
   "Euro730AC": "1.110,61 €",
   "EuroPrecompAC": "157,39 €",
   "EuroIMUAC": "0,00 €",
   "EuroAltroAC": "0,00 €",
   "EuroTotaleAC": "1.268,00 €",
   "GiornoAP": "Differenza con giovedì 7 agosto 2025",
-  "DichiarantiAP": "-83",
+  "DichiarantiAP": "-82",
   "ConiugiAP": "-8",
-  "TotaleAP": "-91",
+  "TotaleAP": "-90",
   "Euro730AP": "-2.442,91 €",
   "EuroPrecompAP": "-654,80 €",
   "EuroIMUAP": "-85,24 €",
@@ -43,5 +43,5 @@
   "DicStessoGiornoAP": "-797",
   "ConStessoGiornoAP": "-132",
   "TotStessoGiornoAP": "-929",
-  "DatiAggiornati": "Dati aggiornati al 06/08/2026 10:35:30"
+  "DatiAggiornati": "Dati aggiornati al 06/08/2026 10:40:31"
 }
