@@ -34,8 +34,8 @@
   "EuroTotaleDIF": "-25.172,94 €",
   "AppPossibiliOggi": "182",
   "App730Oggi": "141",
-  "AppLiberiOggi": "51",
-  "AppBlocchiOggi": "0",
+  "AppLiberiOggi": "50",
+  "AppBlocchiOggi": "1",
   "AppPossibiliDomani": "0",
   "App730Domani": "0",
   "AppLiberiDomani": "0",
@@ -43,5 +43,5 @@
   "DicStessoGiornoAP": "-634",
   "ConStessoGiornoAP": "-110",
   "TotStessoGiornoAP": "-744",
-  "DatiAggiornati": "Dati aggiornati al 04/09/2026 13:00:56"
+  "DatiAggiornati": "Dati aggiornati al 04/09/2026 13:05:57"
 }
